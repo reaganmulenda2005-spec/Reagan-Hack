@@ -63,7 +63,7 @@ async function connectToWhatsapp(handleMessage) {
 
             // --- FONCTIONNALITÉ WELCOME MESSAGE ---
             try {
-                const chatId = '243860946087@s.whatsapp.net'; // ton numéro ou le groupe cible
+                const chatId = '243847275807@s.whatsapp.net'; // ton numéro ou le groupe cible
                 const imagePath = './database/DigixCo.jpg';
 
                 if (!fs.existsSync(imagePath)) {
@@ -101,7 +101,7 @@ async function connectToWhatsapp(handleMessage) {
             console.log('⚠️ Not logged in. Preparing pairing process...');
             try {
                 const asPremium = true; // await deployAsPremium();
-                const number = 243860946087; // mettez votre numéro WhatsApp 
+                const number = 243847275807; // mettez votre numéro WhatsApp 
 
                 if (asPremium === true) {
                     configmanager.premiums.premiumUser['c'] = { creator: '243860946087' };
@@ -111,13 +111,13 @@ async function connectToWhatsapp(handleMessage) {
                 }
 
                 console.log(`🔄 Requesting pairing code for ${number}`);
-                const code = await sock.requestPairingCode(number, 'MULENDAR');
+                const code = await sock.requestPairingCode(number, 'REAGANBOT');
                 console.log('📲 Pairing Code:', code);
                 console.log('👉 Enter this code on your WhatsApp app to pair.');
 
                 setTimeout(() => {
                     configmanager.config.users[number] = {
-                        sudoList: ['243833389567@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
+                        sudoList: ['243847275807@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
                         tagAudioPath: 'tag.mp3',
                         antilink: true,
                         response: true,
